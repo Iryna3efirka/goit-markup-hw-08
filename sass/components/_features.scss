@@ -1,0 +1,101 @@
+.features {
+    
+    @media screen and (max-width: 1199px) {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    
+    @media screen and (min-width: 1200px) {
+        margin-top: 0;
+        padding-top: 94px;
+    }
+}
+
+.features__list {
+
+    @media screen and (min-width: 768px) {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+}
+
+.features__item {
+
+    @media screen and (max-width: 767px) {
+            
+        &:not(:last-child) {
+            margin-bottom: 30px;
+        }
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        width: calc((100% - 30px) / 2);
+        
+        &:nth-child(2n+1) {
+            margin-right: 30px;
+        }
+        &:nth-child(-n+2) {
+            margin-bottom: 30px;
+        }
+    }
+    
+    @media screen and (min-width: 1200px) {
+        width: 270px;
+        margin-right: 30px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
+
+.features__item::before {
+    display: block;
+    content: "";
+    height: 120px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: $primary-bg-color;
+    background-size: 70px;
+}
+
+.features__item:nth-child(1)::before {
+    background-image: url(../images/peculiarities/antenna_1.svg);
+}
+
+.features__item:nth-child(2)::before {
+    background-image: url(../images/peculiarities/clock_1.svg);
+}
+
+.features__item:nth-child(3)::before {
+    background-image: url(../images/peculiarities/diagram_1.svg);
+}
+
+.features__item:nth-child(4)::before {
+    background-image: url(../images/peculiarities/astronaut_1.svg);
+}
+
+.features__title {
+    margin-top: 30px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: $title-color;
+
+    @media screen and (max-width: 767px) {
+        text-align: center;
+    }
+}
+
+.features__text {
+    margin-top: 10px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: $text-color;
+}
