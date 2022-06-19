@@ -3,13 +3,20 @@
 }
 
 .header__container {
-    display: flex;
-    align-items: center;
+    position: relative;
+
+    @media screen and (min-width: 768px) {
+        display: flex;
+        align-items: center;
+    }
 }
 
 .header__navigation {
-    display: flex;
-    align-items: center;
+
+    @media screen and (min-width: 768px) {
+        display: flex;
+        align-items: center;
+    }
 }
 
 .logo {
@@ -81,6 +88,35 @@
     position: absolute;
     bottom: -1px;
     left: 0;
+}
+
+.menu-mobile-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+
+    @media screen and (min-width: 768px) {
+        display: none;
+    }
+}
+
+.menu-mobile-btn .icon-close-header {
+    display: none;
+}
+
+.menu-mobile-btn.is-open .icon-close-header {
+    display: block;
+}
+
+.menu-mobile-btn.is-open .icon-menu-header {
+    display: none;
 }
 
 .contact {
